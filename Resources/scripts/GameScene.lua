@@ -15,7 +15,7 @@ local pipeDistance = 100
 
 local landHeight = 112
 
-local tapV = 260
+local tapV = 312
 local systemGravity = -900
 --config end
 
@@ -243,7 +243,7 @@ local function createPipes(layer)
     			pipeNode:setPosition(cc.p(visibleSize.width * 2, 50 * randomHeight))
     			pipeNode:setTag(randomHeight)
 
-    			local move = cc.MoveTo:create(8, cc.p(- visibleSize.width * 2, 50 * randomHeight))
+    			local move = cc.MoveTo:create(10, cc.p(- visibleSize.width * 2, 50 * randomHeight))
 				pipeNode:runAction(move)
 				break
     		end
@@ -251,7 +251,7 @@ local function createPipes(layer)
 	end
 
 	initPipe()
-	createPipeFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(createPipe, 1.3, false)
+	createPipeFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(createPipe, 1.4, false)
 end
 
 

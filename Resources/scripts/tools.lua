@@ -93,7 +93,7 @@ function createBird()
 
     local spriteBird = cc.Sprite:createWithSpriteFrame(birdFrames[1])       
 
-    local animation = cc.Animation:createWithSpriteFrames(birdFrames, 0.1)
+    local animation = cc.Animation:createWithSpriteFrames(birdFrames, 0.09)
     local animate = cc.Animate:create(animation);
     spriteBird:runAction(cc.RepeatForever:create(animate))
 
